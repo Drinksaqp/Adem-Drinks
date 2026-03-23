@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Delivery de Licores Dora</title>
+    <title>Adem Licorería</title>
 
     <style>
         body {
-            font-family: Arial;
             margin: 0;
-            background-color: #f5f5f5;
+            font-family: Arial;
+            background-color: white;
         }
 
-        header {
-            background-color: #111;
+        header, footer {
+            background-color: #0095B6; /* azul bondi */
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
         }
 
-        h1 {
-            margin: 0;
+        nav {
+            background-color: #007a99;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .container {
             padding: 20px;
-            text-align: center;
         }
 
         .productos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
         }
 
         .producto {
-            background: white;
-            padding: 15px;
+            border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 10px;
+            text-align: center;
         }
 
         .producto img {
             width: 100%;
-            border-radius: 10px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
         .precio {
             color: green;
-            font-size: 18px;
             font-weight: bold;
-        }
-
-        .boton {
-            display: inline-block;
-            margin-top: 10px;
-            background-color: green;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-decoration: none;
         }
 
         .whatsapp {
@@ -68,54 +67,122 @@
             color: white;
             padding: 15px;
             border-radius: 50%;
-            font-size: 20px;
             text-decoration: none;
+            font-size: 20px;
+        }
+
+        .seccion {
+            display: none;
+        }
+
+        .activo {
+            display: block;
         }
     </style>
+
+    <script>
+        function mostrar(seccion) {
+            document.getElementById("productos").classList.remove("activo");
+            document.getElementById("promociones").classList.remove("activo");
+            document.getElementById("complementos").classList.remove("activo");
+
+            document.getElementById(seccion).classList.add("activo");
+        }
+    </script>
 </head>
 
 <body>
 
 <header>
-    <h1>🍾 Delivery de Licores Dora</h1>
-    <p>Entrega rápida a domicilio</p>
+    <h1>🍾 Adem Licorería</h1>
+    <p>Delivery rápido en Arequipa</p>
 </header>
+
+<nav>
+    <a href="#" onclick="mostrar('productos')">Productos</a>
+    <a href="#" onclick="mostrar('promociones')">Promociones</a>
+    <a href="#" onclick="mostrar('complementos')">Complementos</a>
+</nav>
 
 <div class="container">
 
-    <h2>Productos</h2>
+    <!-- PRODUCTOS -->
+    <div id="productos" class="seccion activo">
+        <h2>Productos</h2>
+        <div class="productos">
 
-    <div class="productos">
+            <!-- DUPLICA ESTO PARA LLEGAR A 30 -->
+            <div class="producto">
+                <img src="https://via.placeholder.com/150">
+                <h4>Whisky</h4>
+                <p class="precio">S/ 80</p>
+            </div>
 
-        <div class="producto">
-            <img src="https://via.placeholder.com/200" alt="">
-            <h3>Whisky</h3>
-            <p class="precio">S/ 80</p>
-            <a href="https://wa.me/51999999999?text=Quiero%20Whisky" class="boton">Comprar</a>
+            <div class="producto">
+                <img src="https://via.placeholder.com/150">
+                <h4>Ron</h4>
+                <p class="precio">S/ 50</p>
+            </div>
+
+            <div class="producto">
+                <img src="https://via.placeholder.com/150">
+                <h4>Vodka</h4>
+                <p class="precio">S/ 60</p>
+            </div>
+
         </div>
+    </div>
 
-        <div class="producto">
-            <img src="https://via.placeholder.com/200" alt="">
-            <h3>Ron</h3>
-            <p class="precio">S/ 50</p>
-            <a href="https://wa.me/51999999999?text=Quiero%20Ron" class="boton">Comprar</a>
-        </div>
+    <!-- PROMOCIONES -->
+    <div id="promociones" class="seccion">
+        <h2>Promociones</h2>
+        <p>🔥 2 cervezas + 1 snack S/25</p>
+        <p>🔥 Whisky + hielo gratis</p>
+    </div>
 
-        <div class="producto">
-            <img src="https://via.placeholder.com/200" alt="">
-            <h3>Vodka</h3>
-            <p class="precio">S/ 60</p>
-            <a href="https://wa.me/51999999999?text=Quiero%20Vodka" class="boton">Comprar</a>
-        </div>
-
+    <!-- COMPLEMENTOS -->
+    <div id="complementos" class="seccion">
+        <h2>Complementos</h2>
+        <p>Hielo 🧊</p>
+        <p>Gaseosas 🥤</p>
+        <p>Snacks 🍟</p>
     </div>
 
 </div>
 
-<!-- BOTÓN WHATSAPP -->
+<footer>
+    <p>Adem Licorería © 2026</p>
+</footer>
+
+<!-- WHATSAPP -->
 <a href="https://wa.me/51999999999?text=Hola%20quiero%20hacer%20un%20pedido" class="whatsapp">
-    💬
+💬
 </a>
 
 </body>
 </html>
+
+<div id="pagos" class="seccion">
+<h2>Pagos 💳</h2>
+
+<p>Puedes pagar por:</p>
+
+<p>📱 Yape: 987654321</p>
+<p>📱 Plin: 987654321</p>
+
+<p>⚠️ Enviar comprobante por WhatsApp</p>
+
+<img src="https://via.placeholder.com/200" alt="QR Yape">
+
+</div>
+
+
+<a href="#" onclick="mostrar('pagos')">Pagos</a>
+
+
+<h3>📍 Zonas de Delivery</h3>
+<p>🚚 Cercado - S/5</p>
+<p>🚚 Yanahuara - S/6</p>
+<p>🚚 Cayma - S/7</p>
+
+https://wa.me/51987654321?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Adem%20Licorería

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery de Licores Dora</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .producto {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .producto img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .precio {
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍾 Delivery de Licores Dora</h1>
+    <p>Entrega rápida a domicilio</p>
+</header>
+
+<div class="container">
+
+    <h2>Productos</h2>
+
+    <div class="productos">
+
+        <div class="producto">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Whisky</h3>
+            <p class="precio">S/ 80</p>
+            <a href="https://wa.me/51999999999?text=Quiero%20Whisky" class="boton">Comprar</a>
+        </div>
+
+        <div class="producto">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Ron</h3>
+            <p class="precio">S/ 50</p>
+            <a href="https://wa.me/51999999999?text=Quiero%20Ron" class="boton">Comprar</a>
+        </div>
+
+        <div class="producto">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Vodka</h3>
+            <p class="precio">S/ 60</p>
+            <a href="https://wa.me/51999999999?text=Quiero%20Vodka" class="boton">Comprar</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/51999999999?text=Hola%20quiero%20hacer%20un%20pedido" class="whatsapp">
+    💬
+</a>
+
+</body>
+</html>
